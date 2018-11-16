@@ -19,6 +19,62 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    >
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://vega.github.io/vega/vega-core.min.js"></script>
+    <script src="zoomcharts.js"></script>
+     <script>
+        var gc = new GeoChart({
+            container: document.getElementById("demo"),
+            area: { height: 500 },
+            data: {
+                preloaded: {
+                    nodes: [
+                        {
+                            id: "Squaw Valley",
+                            coordinates: [-119.181449, 36.707146]
+                        },
+                        {
+                            id: "Atlanta",
+                            coordinates: [-84.388846, 33.752504]
+                        },
+                        {
+                            id: "New York",
+                            coordinates: [-73.996705, 40.74838]
+                        },
+                        {
+                            id: "Lake Placid",
+                            coordinates: [-81.364918, 27.294474]
+                        }
+                    ],
+                    links: [
+                        { from: "New York", to: "Atlanta", drivingTime: "13 hours 3 mins" },
+                        { from: "New York", to: "Squaw Valley", drivingTime: "1 day 18 hours" },
+                        { from: "New York", to: "Lake Placid", drivingTime: "17 hours 33 mins" },
+                        { from: "Lake Placid", to: "Squaw Valley", drivingTime: "1 day 15 hours" },
+                        { from: "Atlanta", to: "Squaw Valley", drivingTime: "1 day 10 hours" }
+                    ]
+                }
+            },
+            navigation: {
+                initialLat: 35.04409,
+                initialLng: -90.246213,
+                initialZoom: 4,
+                minZoom: 4
+            },
+            layers: [
+                {
+                    name: "Points",
+                    type: "items"
+                }
+            ]
+        });
+    </script>
     <title>React App</title>
   </head>
   <body>
