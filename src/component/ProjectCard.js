@@ -30,7 +30,7 @@ const ProjectCard = (props) => {
 }
 
 ProjectCard.defaultProps = {
-	thumbnail: "images/image-placeholder.png",
+	thumbnail: "placeholder.png",
 	title: "This is title.",
 	desc: "This is description.",
 	btnText: "Go",
