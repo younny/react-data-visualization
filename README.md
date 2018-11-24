@@ -4,6 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+Install required modules before running the app. Module list is availble in `package.json`
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
@@ -18,7 +21,8 @@ You will also see any lint errors in the console.
 This is personal project to practice data visualization by using d3 + React. More visualization method will be intergated in the future.
 
 ToDo
-- API integration with real data.
+- API integration with real data. (Redux setup)
 - Remove static data source
 - Add more kinds of chart
 - Clean up.
+- Test code
