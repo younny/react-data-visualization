@@ -1,3 +1,4 @@
+//@flow
 import React from 'react'
 import Container from 'react-bootstrap/lib/Container'
 import Dropdown from 'react-bootstrap/lib/Dropdown'
@@ -11,32 +12,32 @@ import BasicMap from '../component/BasicMap'
 class DataVisualizationScreen extends React.Component {
 	constructor(props) {
 		super(props)
+		this.state = {}
 	}
 
 	render() {
-		const { match } = this.props
 
 		return (
 				<Container>
 						<ButtonToolbar style={{ marginTop: "5%" }}>
 							<DropdownButton
-							 	style={{ marginRight: 5 }} 
+							 	style={{ marginRight: 5 }}
 								title="Select Data"
 								variant="info">
 							    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
 							    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
 							    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
 							</DropdownButton>
-							<DropdownButton 
-								style={{ marginRight: 5 }} 
+							<DropdownButton
+								style={{ marginRight: 5 }}
 								title="Filter"
 								variant="info">
 							    <Dropdown.Item href="#/action-1">By Distance</Dropdown.Item>
 							    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
 							    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
 							</DropdownButton>
-							<DropdownButton 
-								style={{ marginRight: 5 }} 
+							<DropdownButton
+								style={{ marginRight: 5 }}
 								title="Other"
 								variant="info">
 							    <Dropdown.Item href="#/action-1">By Distance</Dropdown.Item>
