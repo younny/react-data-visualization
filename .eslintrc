@@ -1,0 +1,42 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "react",
+        "flowtype"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true
+        }
+    },
+    "env": {
+        "node": true,
+        "jest": true,
+        "es6": true
+    },
+    "globals": {
+        "__DEV__": true
+    },
+    "rules": {
+        /*
+        *                 Best Practices
+        */
+        "semi": 0,
+        "no-use-before-define": 0,
+         /*
+         *                React
+         */
+        "react/prefer-stateless-function": [
+          2, { "ignorePureComponents": true }
+        ],
+         /*
+         *                FlowType
+         */
+        "flowtype/no-dupe-keys": 2
+    }
+}
