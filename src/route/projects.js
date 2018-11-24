@@ -17,7 +17,7 @@ class Projects extends React.Component {
 		return (
 			<Container>
 			  <Row>
-			    <Col xs={6} md={4}>
+			    <Col xs={7} sm={7} md={4}>
 				    <ProjectCard 
 						title="Data Visualization"
 						desc="Using D3.js to visualize some data sources."
@@ -25,7 +25,7 @@ class Projects extends React.Component {
 						href="/projects/1"
 					/>
 			    </Col>
-			    <Col xs={6} md={4}>
+			    <Col xs={7} sm={7} md={4}>
 				    <ProjectCard 
 						title="Data Visualization"
 						desc="Using D3.js to visualize some data sources."
@@ -33,7 +33,7 @@ class Projects extends React.Component {
 						href="/projects/2"
 					/>
 			    </Col>
-			    <Col xs={6} md={4}>
+			    <Col xs={7} sm={7} md={4}>
 			      	<ProjectCard 
 						title="Data Visualization"
 						desc="Using D3.js to visualize some data sources."
