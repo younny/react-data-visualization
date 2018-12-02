@@ -10,5 +10,10 @@
     "bt": {
       "go": "보기"
     }
+  },
+  "data_filter": {
+    "filter1": "필터1",
+    "filter2": "필터2",
+    "filter3": "필터3"
   }
 }
