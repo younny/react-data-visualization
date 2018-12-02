@@ -1,0 +1,19 @@
+{
+  "main_menu": {
+    "home": "홈",
+    "about": "메뉴2",
+    "projects": "프로젝트"
+  },
+  "project_name": "프로젝트 제목",
+  "project_desc": "프로젝트 설명",
+  "component": {
+    "bt": {
+      "go": "보기"
+    }
+  },
+  "data_filter": {
+    "filter1": "필터1",
+    "filter2": "필터2",
+    "filter3": "필터3"
+  }
+}

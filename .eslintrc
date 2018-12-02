@@ -23,6 +23,7 @@
         "__DEV__": true
     },
     "rules": {
+        "no-mixed-spaces-and-tabs": 0,
         /*
         *                 Best Practices
         */

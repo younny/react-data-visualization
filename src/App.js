@@ -1,5 +1,5 @@
 import React, { Component, Suspense, lazy } from 'react'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Navigation } from './component/nav'
 import { ThemeContext, themes } from './context/theme-context'
 
@@ -15,8 +15,8 @@ class App extends Component {
     this.toggleTheme = () => {
       this.setState(state => ({
         theme:
-          state.theme === themes.dark 
-          ? themes.light 
+          state.theme === themes.dark
+          ? themes.light
           : themes.dark
       }))
     }
@@ -31,7 +31,7 @@ class App extends Component {
     return (
         <ThemeContext.Provider value={this.state}>
           <Navigation />
-          <Router>            
+          <Router>
             <Suspense fallback={<div>Loading...</div>}>
               <Switch>
                 <Route exact path="/" component={Home} />
