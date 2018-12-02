@@ -1,7 +1,6 @@
 //@flow
 import React from 'react'
-import Card from 'react-bootstrap/lib/Card'
-import Button from 'react-bootstrap/lib/Button'
+import { Card, Button } from 'react-bootstrap'
 
 type Repo = {
 	link: string | null,
