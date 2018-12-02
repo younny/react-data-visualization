@@ -4,9 +4,6 @@ import Container from 'react-bootstrap/lib/Container'
 import Dropdown from 'react-bootstrap/lib/Dropdown'
 import DropdownButton from 'react-bootstrap/lib/DropdownButton'
 import ButtonToolbar from 'react-bootstrap/lib/ButtonToolbar'
-import Button from 'react-bootstrap/lib/Button'
-import Col from 'react-bootstrap/lib/Col'
-import Row from 'react-bootstrap/lib/Row'
 import BasicMap from '../component/BasicMap'
 
 class DataVisualizationScreen extends React.Component {

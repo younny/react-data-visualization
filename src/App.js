@@ -1,5 +1,5 @@
 import React, { Component, Suspense, lazy } from 'react'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Navigation } from './component/nav'
 import { ThemeContext, themes } from './context/theme-context'
 

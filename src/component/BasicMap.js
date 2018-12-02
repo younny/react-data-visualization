@@ -12,7 +12,6 @@ const mapData = require("../south_korea.json")
 const gpsData = require("../data/sample_1.json")
 
 const numPatt = /[0-9]/g
-const charPatt = /[^0-9]/g
 const samples = gpsData.map((d) => {
   return {
     name: d.VEHICLE_NUM,
@@ -26,7 +25,6 @@ const wrapperStyles = {
   maxWidth: 980,
   margin: "0 auto",
 }
-
 
 class BasicMap extends Component {
   render() {

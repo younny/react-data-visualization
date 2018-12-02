@@ -1,13 +1,10 @@
 import React, { lazy } from 'react'
-import Button from 'react-bootstrap/lib/Button'
 
 const DataVisualizationScreen = lazy(() => import('./data-visualization'))
 
 
 class ProjectDetails extends React.Component {
-	constructor(props) {
-		super(props)
-	}
+
 
 	renderPlaceholderView = (id) => {
 		return (
@@ -31,7 +28,7 @@ class ProjectDetails extends React.Component {
 	render() {
 		const { match } = this.props
 
-		return this.renderById(match.params.id)	
+		return this.renderById(match.params.id)
 	}
 }
 
