@@ -8,20 +8,11 @@ import {
   Markers,
   Marker
 } from "react-simple-maps"
-const colormap = require("../data/colormap.json")
-const mapData = require("../data/south_korea.json")
-const gpsData = require("../data/sample_1.json")
 
-const numPatt = /[0-9]/g
-const samples = gpsData.map((d) => {
-  const area = d.VEHICLE_NUM.substring(0, 2)
-  const number = d.VEHICLE_NUM.match(numPatt).reverse().join("").substring(0, 4)+"88"
-  return {
-    name: d.VEHICLE_NUM,
-    coordinates: [d.GPS_LONG, d.GPS_LAT],
-    color: '#'+ colormap[area] + number
-  }
-})
+type Props = {
+  mapSource: Array<Object>,
+  data: Array<Object>
+}
 
 const wrapperStyles = {
   width: "100%",
@@ -29,7 +20,12 @@ const wrapperStyles = {
   margin: "0 auto",
 }
 
-const BasicMap = () => {
+const BasicMap = (props: Props) => {
+  const {
+    mapSource,
+    data
+  } = props
+
   return (
     <div style={wrapperStyles}>
       <ComposableMap
@@ -39,7 +35,7 @@ const BasicMap = () => {
           xOffset: -7200,
           yOffset: 1100
         }}
-        width={980}
+        width={980*0.8}
         height={1000}
         style={{
           width: "100%",
@@ -47,7 +43,7 @@ const BasicMap = () => {
         }}
         >
         <ZoomableGroup center={[0,20]} disablePanning>
-          <Geographies geography={mapData}>
+          <Geographies geography={mapSource}>
             {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
               <Geography
                 key={i}
@@ -77,7 +73,7 @@ const BasicMap = () => {
             ))}
           </Geographies>
           <Markers>
-            {samples.map((s, i) => {
+            {data.map((s, i) => {
               return (
               <Marker
                 key={i}
